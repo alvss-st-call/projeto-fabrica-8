@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalhes do Paciente</h2>
+
+<div class="detalhe">
+    <img src="{{ paciente.image }}" alt="Foto de {{ paciente.nome }}">
+    <h3>{{ paciente.nome }}</h3>
+    <p><strong>Idade:</strong> {{ paciente.idade }}</p>
+    <p><strong>Condição Médica:</strong> {{ paciente.condicao }}</p>
+    <p><strong>Contato:</strong> {{ paciente.telefone }}</p>
+</div>
+
+<a href="{{ url_for('listar_pacientes') }}">← Voltar à lista</a>
+{% endblock %}
